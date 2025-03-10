@@ -25,7 +25,7 @@ const apiKey = "YOUR_API_KEY_HERE";
 - 🚀 Improved data visualization.
 - 
 ## 📄 License  
-**MIT License** – Free for use and modification.  
+Free for use and modification.  
 
 🔗 **Live Demo:** https://aqitester.tiiny.site
 📧 **Contact:** ima.rahman06@gmail.com
