@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQI Tester - Live Map</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="aqi-section">
+            <h1>AQI Tester</h1>
+            <input type="text" id="cityInput" placeholder="Enter city name">
+            <button id="searchCity">Search</button>
+            <button id="getLocation">Access Location</button>
+            <p id="cityName">City: Fetching...</p>
+
+            <div id="aqiInfo">
+                <p id="aqi">Click "Access Location" or enter a city to get AQI data.</p>
+                <div id="pollutants">
+                    <p><strong>PM2.5:</strong> <span id="pm25">-</span> µg/m³</p>
+                    <p><strong>PM10:</strong> <span id="pm10">-</span> µg/m³</p>
+                    <p><strong>NO₂:</strong> <span id="no2">-</span> µg/m³</p>
+                    <p><strong>CO:</strong> <span id="co">-</span> µg/m³</p>
+                    <p><strong>SO₂:</strong> <span id="so2">-</span> µg/m³</p>
+                    <p><strong>O₃:</strong> <span id="o3">-</span> µg/m³</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="map-section">
+            <div id="map"></div>
+            <div class="buttons-container">
+                <button id="getApp">Get App</button>
+                <button id="contactCPCB">Contact CPCB</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="chart-container">
+        <h2>Hourly AQI Levels</h2>
+        <canvas id="aqiChart"></canvas>
+    </div>
+  <div class="metercontainer">
+        <h1>(AQI) Air Quality Index Status Meter </h1>
+        <div class="meter">
+            <svg width="200" height="200" viewBox="0 0 200 200">
+            <circle class="background" cx="100" cy="100" r="90" stroke-width="10"></circle>
+            <circle class="meter-circle" cx="100" cy="100" r="90" stroke-width="10"></circle>
+            <text class="meter-text" x="50%" y="50%" text-anchor="middle" dy="0.3em">AQI</text>
+              
+            </svg>
+         
+            <text class="index" x="10%" y="10" text-achor="right">
+                <p >Green - Good</p>
+                <p>Yellow - Moderate</p>
+                <p>Orange - Sensitive</p>
+                <p>Red - Unhealthy</p>
+                <p>Purple - Hazardous</p>
+             
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
